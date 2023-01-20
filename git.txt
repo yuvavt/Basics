@@ -1,0 +1,135 @@
+Exercise: 1) What is the method signature (return type, method name, and parameters) of the last function in this blob?
+
+Ans:
+int cmd_worktree(int ac, const char **av, const char *prefix)
+Return type: int
+Method name: cmd_worktree
+Parameters: const char **av, const char *prefix
+
+Exercise: 2) What is the latest version of the release notes (RelNotes....txt) for the git repository?
+
+Ans: RelNotes-1.5.2.txt
+
+Exercise: 3) What is the output of git cat-file -p 83484f | tail -4 | head -1? Briefly explain what this command does.
+
+Ans: In the above command 'tail -4' picks the last 4 records and 'head -1' output's the 1st record of them.
+
+output: 100644 blob f55d4083edd518a0dad26a37ac4d5c6877184c4f	tutorial.txt
+
+
+
+Exercise: 5) What is the commit message submitted with this commit?
+
+Ans: l10n: de.po: Update German translation for Git v2.31.0
+
+Exercise: 6) Write a bash command(s) to search the commit graph for commits that mention the word "refactored". Then, run the command and add the output (answer should include command and output).
+
+Ans:
+(base) yuva@Yuvas-MacBook-Air git % PAGER='head -n 200' git log --graph --oneline --grep=refactored
+* 9aebc4708a upload-pack tests: avoid a non-zero "grep" exit status
+* e2f89586fa log, show: add tests for messages containing CRLF
+* cea69151a4 index-pack: restore "resolving deltas" progress meter
+* 873fa13e3f Merge branch 'pd/mergetool-nvimdiff'
+* 2fa05f31bd t/helper/test-read-graph.c: support commit-graph chains
+* fa82be982d Merge branch 'hi/gpg-prefer-check-signature'
+* 6b9919c0a2 git-gui: add missing close bracket
+* 25063e2530 Merge branch 'mr/bisect-in-c-1'
+* 0be5caf97c Merge branch 'jc/log-graph-simplify'
+* 8e4c8af058 push: disallow --all and refspecs when remote.<name>.mirror is set
+* 3012397e03 dir-iterator: refactor state machine model
+* 464c824a9b Merge branch 'ag/sequencer-reduce-rewriting-todo' into pw/rebase-i-internal
+* e62e68d359 Merge branch 'ag/sequencer-reduce-rewriting-todo'
+* 94bcad7979 sequencer: change complete_action() to use the refactored functions
+* e04df61256 diff: drop unused color reset parameters
+* 7b95849be4 attr: do not mark queried macros as unset
+* 34bec2c458 sequencer: add a new function to silence a command, except if it fails
+* b67f6b26e3 commit-reach: properly peel tags
+* 6c003d6ffb reopen_tempfile(): truncate opened file
+* 960786e761 push: colorize errors
+* d0aaa46fd3 commit: move empty message checks to libgit
+* 21dfc5e08f run-command.c: print program 'git' when tracing git_cmd mode
+* f18777ba6e http: fix handling of missing CURLPROTO_*
+* e62ba43244 grep: remove redundant double assignment to 0
+* 1eab194bf0 files-backend: delete dead code in files_init_db()
+* 1a27409ae8 read_early_config(): really discover .git/
+* 40cfc95856 Merge branch 'nd/error-errno'
+* 0e94242df1 index-pack: correct --keep[=<msg>]
+* 26f7b5c79a Merge branch 'kn/ref-filter-atom-parsing'
+* 2b597f3307 Merge branch 'ls/test-must-fail-sigpipe'
+* bbfe5302d5 implement test_might_fail using a refactored test_must_fail
+* 7cb5f7c44d blame: fix object casting regression
+* ba5312da19 Merge branch 'jc/mailinfo-lib'
+* f0e7f11d05 index-pack: fix truncation of off_t in comparison
+* b7994af0f9 type_from_string_gently: make sure length matches
+* 8b9c2dd4de dumb-http: do not pass NULL path to parse_pack_index
+* 3759d27aca parse_color: fix return value for numeric color values 0-8
+* a39c14af82 interpret_branch_name: factor out upstream handling
+* f2e087395b branch: report invalid tracking branch as gone
+* 048b399192 gitweb.perl: fix %highlight_ext mappings
+* add416a6c0 checkout: don't confuse ref and object flags
+* 70969f775d git-add--interactive.perl: Remove two unused variables
+* d577cd216e git-sh-setup: make require_clean_work_tree part of the interface
+* bd2c86ef00 make "git push -v" actually verbose
+* e5fa45c159 resolve_gitlink_packed_ref(): fix mismerge
+* 12b1443c2c gitweb: Restructure projects list generation
+* 06796607ef trace: refactor to support multiple env variables
+* 6b01b67658 vcs-svn: Implement Prop-delta handling
+* 05bb5a2584 gitweb: Include links to feeds in HTML header only for '200 OK' response
+* 3d5854e765 tag: recognize rfc1991 signatures
+* 2102440c17 fmt-merge-msg -m to override merge title
+* 29e5573d1e git-gui: handle bare repos correctly
+* 27d6b08536 rerere: refactor rerere logic to make it independent from I/O
+* 395de250d9 Expand ~ and ~user in core.excludesfile, commit.template
+* 8f8f5476cd Introduce new pretty formats %g[sdD] for reflog information
+* 6957eb9a39 diff.c: shuffling code around
+* 5424bc557f http*: add helper methods for fetching objects (loose)
+* 2264dfa5c4 http*: add helper methods for fetching packs
+* 4f66250df6 http-push: send out fetch requests on queue
+* a2fab531bb strbuf_check_branch_ref(): a helper to check a refname for a branch
+* 3b3637c3f1 send-email: correct two tests which were going interactive
+* c18f75a1e9 send-email: add tests for refactored prompting
+* aab3b9a1aa read-tree A B C: do not create a bogus index and do not segfault
+* f10d5b064a git-gui: Add a search command to the blame viewer.
+* 6eb1b43793 cherry-pick/revert: make direct internal call to merge_tree()
+* 041aee31be builtin-add.c: restructure the code for maintainability
+* 85af7929ee git-blame --reverse
+* 3562198b7d gitweb: Use feed link according to current view
+* ea5105a5e3 config: add 'git_config_string' to refactor string config variables.
+* f64fe7b481 Merge branch 'kh/commit' into wc/add-i
+* 24ccd8b88e gtksourceview2 support for gitview
+* d56651c0ef Don't allow combination of -g and --reverse as it doesn't work
+* 4d87b9c5db launch_editor(): Heed GIT_EDITOR and core.editor settings
+* b1fa2bfff3 git-gui: Abstract the revision picker into a mega widget
+* 19e283f5c2 git-gui: Don't offer tracking branches if none exist.
+* fec4a78590 git-gui: Improve diff --cc viewing for unmerged files.
+* 41bdcda373 git-gui: Modified makefile to embed version into git-gui script.
+* 9bc879c1ce Refactor how we open pack files to prepare for multiple windows.
+* 4adffc7b54 Add ftp:// protocol support for git-http-fetch
+* 23d6d112c0 Add sideband status report to git-archive protocol
+* 6d297f8137 Status update on merge-recursive in C
+* 44c10841ea Remove unnecessary forward declaration of unpack_entry.
+* b18f9bf462 gitweb: Add git_page_nav for later use
+* 7baa3e8694 Some curl versions lack curl_easy_duphandle()
+
+Exercise: 7) What is the name of the first file listed that changed between versions 2.31.0 and 2.31.1?
+
+Ans:
+(base) yuva@Yuvas-MacBook-Air git % git diff --raw v2.31.0 v2.31.1
+:000000 100644 0000000000 f9b06b8e1b A  Documentation/RelNotes/2.31.1.txt
+
+Exercise: 8) Provide a list of all the branches for the git repository.
+
+Ans:
+(base) yuva@Yuvas-MacBook-Air git % git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/jch
+  remotes/origin/main
+  remotes/origin/maint
+  remotes/origin/master
+  remotes/origin/next
+  remotes/origin/seen
+  remotes/origin/todo
+
+
+

@@ -1,0 +1,5 @@
+-What is your favorite programming language? Why?
+Ans: "Python" is may favorite because it is easy to learn and code even for a naive user. Most of the upcoming technologies like ML, AI are making use of python for developing many more interesting projects.
+
+- Is your favorite language the one you are also most experienced with? If not, which language are you most experienced with?
+Ans: Yes my favorite language is the one which I'm mostly experienced in. Apart from that I can code using Java and C languages as well.
